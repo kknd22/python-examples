@@ -1,0 +1,46 @@
+14
+.stitched {
+   padding: 20px;
+   margin: 10px;
+   background: #ff0030;
+   color: #fff;
+   font-size: 21px;
+   font-weight: bold;
+   line-height: 1.3em;
+   border: 2px dashed #fff;
+   border-radius: 10px;
+   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   text-shadow: -1px -1px #aa3030;
+   font-weight: normal;
+}import json
+
+# from python to json
+
+pdata = {
+  "ii" : 1,
+  "ss" : "str",
+  "obj" : {
+    "f1" : "field1",
+    "f2" : "filed2",
+  },
+  "arrs": ["a", "b", "c"]
+}
+
+jdata = json.dumps(pdata)
+print(type(pdata))
+print(type(jdata))
+print(jdata)
+
+jdata2 = '''{
+  "a" : "av",
+  "b" : "bv"
+}'''
+
+pdata2 = json.loads(jdata2)
+print(type(jdata2))
+print(type(pdata2))
+print(pdata2)
+
+
+pdata3 = json.load(open("data.json"))
+print(pdata3)

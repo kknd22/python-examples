@@ -29,3 +29,7 @@ def getKthHighFrequencyWord(s, k):
   return wordList
 
 print(getKthHighFrequencyWord(str, 2))  
+
+
+aabaabaababababababb
+aabaabababababababab
